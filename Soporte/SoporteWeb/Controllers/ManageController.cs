@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using SoporteWeb.Models;
+﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin.Security;
+using SoporteWeb.Models;
 
 namespace SoporteWeb.Controllers
 {
@@ -31,9 +32,9 @@ namespace SoporteWeb.Controllers
             {
                 return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
             }
-            private set
-            {
-                _signInManager = value;
+            private set 
+            { 
+                _signInManager = value; 
             }
         }
 
@@ -332,7 +333,7 @@ namespace SoporteWeb.Controllers
             base.Dispose(disposing);
         }
 
-        #region Aplicaciones auxiliares
+#region Aplicaciones auxiliares
         // Se usan para protección XSRF al agregar inicios de sesión externos
         private const string XsrfKey = "XsrfId";
 
@@ -383,6 +384,6 @@ namespace SoporteWeb.Controllers
             Error
         }
 
-        #endregion
+#endregion
     }
 }

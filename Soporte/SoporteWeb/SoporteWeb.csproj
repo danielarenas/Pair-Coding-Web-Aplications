@@ -170,14 +170,31 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CostoesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TipoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202011250211262_InitialCreate.cs" />
+    <Compile Include="Migrations\202011250211262_InitialCreate.Designer.cs">
+      <DependentUpon>202011250211262_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012020013385_StartProject.cs" />
+    <Compile Include="Migrations\202012020013385_StartProject.Designer.cs">
+      <DependentUpon>202012020013385_StartProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202012020154328_StartProject1.cs" />
+    <Compile Include="Migrations\202012020154328_StartProject1.Designer.cs">
+      <DependentUpon>202012020154328_StartProject1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Costo.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Tipo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -342,6 +359,16 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Tipoes\Create.cshtml" />
+    <Content Include="Views\Tipoes\Delete.cshtml" />
+    <Content Include="Views\Tipoes\Details.cshtml" />
+    <Content Include="Views\Tipoes\Edit.cshtml" />
+    <Content Include="Views\Tipoes\Index.cshtml" />
+    <Content Include="Views\Costoes\Create.cshtml" />
+    <Content Include="Views\Costoes\Delete.cshtml" />
+    <Content Include="Views\Costoes\Details.cshtml" />
+    <Content Include="Views\Costoes\Edit.cshtml" />
+    <Content Include="Views\Costoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -361,6 +388,17 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202011250211262_InitialCreate.resx">
+      <DependentUpon>202011250211262_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012020013385_StartProject.resx">
+      <DependentUpon>202012020013385_StartProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202012020154328_StartProject1.resx">
+      <DependentUpon>202012020154328_StartProject1.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
