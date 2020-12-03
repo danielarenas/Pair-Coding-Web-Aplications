@@ -5,7 +5,10 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<div class="text-center mt-3">
+    <h2>Costos</h2>
+</div>
+
 
 @*
         <p>
@@ -58,9 +61,9 @@
                         @Html.DisplayFor(modelItem => item.Description)
                     </td>
                     <td>
-                        <a href="@Url.Action("Edit", "Costoes", new { id = item.Id })" title="Editar"><i class="far fa-edit text-warning"></i></a>
+                        <a href="@Url.Action("Edit", "Costoes", new { id = item.Id })" title="Editar"><i class="fas fa-file-alt text-warning"></i></a>
                         <a href="@Url.Action("Details", "Costoes", new { id = item.Id })" title="Ver"><i class="fas fa-eye text-info"></i></a>
-                        <a href="@Url.Action("Delete", "Costoes", new { id = item.Id })" title="Eliminar"><i class="fas fa-trash text-danger"></i></a>
+                        <a href="@Url.Action("Delete", "Costoes", new { id = item.Id })" title="Eliminar"><i class="fas fa-times-circle text-danger"></i></a>
                     </td>
                 </tr>
                     }

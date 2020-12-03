@@ -4,29 +4,40 @@
     ViewBag.Title = "Delete";
 }
 
-<h2>Delete</h2>
+<div class="text-center mt-3">
+    <h2>Eliminar</h2>
+</div>
 
-<h3>¿Seguro que deseas eliminarlo?</h3>
-<div>
-    <h4>Tipo</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <h3>¿Seguro que deseas eliminarlo?</h3>
+            <div>
+                <h4>Tipo</h4>
+                <hr />
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Name)
+                    </dt>
 
-    </dl>
+                    <dd>
+                        @Html.DisplayFor(model => model.Name)
+                    </dd>
 
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
+                </dl>
 
-        <div class="form-actions no-color">
-            <input type="submit" value="Eliminar" class="btn btn-dark" /> |
-            @Html.ActionLink("Back to List", "Index")
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-actions no-color">
+                        <input type="submit" value="Eliminar" class="btn btn-dark" /> |
+                        @Html.ActionLink("Regresar a la lista", "Index")
+                    </div>
+                }
+            </div>
         </div>
-    }
+
+    </div>
 </div>
