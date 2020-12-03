@@ -20,12 +20,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">@Html.ActionLink("Inicio", "Index", "Home", null, new { @class = "nav-link" })</li>
-                <li class="nav-item">@Html.ActionLink("Servicios", "About", "Home", null, new { @class = "nav-link" })</li>
+                <li class="nav-item">@Html.ActionLink("Acerca de Nosotros", "About", "Home", null, new { @class = "nav-link" })</li>
                 <li class="nav-item">@Html.ActionLink("Contacto", "Contact", "Home", null, new { @class = "nav-link" })</li>
                 @if (User.Identity.IsAuthenticated)
                 {
-                    <li class="nav-item">@Html.ActionLink("Tipos", "Index", "Tipoes", null, new { @class = "nav-link" })</li>
-                    <li class="nav-item">@Html.ActionLink("Costos", "Index", "Costoes", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Servicios", "Index", "Tipoes", null, new { @class = "nav-link" })</li>
+                    <li class="nav-item">@Html.ActionLink("Trabajos", "Index", "Costoes", null, new { @class = "nav-link" })</li>
 
                 }
             </ul>
