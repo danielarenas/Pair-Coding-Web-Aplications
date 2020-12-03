@@ -10,15 +10,18 @@ namespace SoporteWeb.Models
     public class Costo
     {
         public int Id { get; set; }
-       [Display(Name ="Usuario")]
-        public ApplicationUser User{ get; set; }
-        [Display(Name ="Fecha")]
+        public string ApplicationUser { get; set; }
+        [Display(Name = "Usuario")]
+        [ForeignKey("ApplicationUser")]
+        public ApplicationUser User { get; set; }
+        [Display(Name = "Fecha")]
         public DateTime DateTime { get; set; }
-        [Display (Name ="Descripcion")]
+        [Display(Name = "Descripcion")]
         public string Description { get; set; }
-        [Display (Name ="Tipo")]
+        [Display(Name = "Tipo")]
         public int TipoId { get; set; }
         [ForeignKey("TipoId")]
+        [Display(Name = "Tipo")]
         public Tipo Tipo { get; set; }
     }
 }

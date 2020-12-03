@@ -9,7 +9,7 @@
             <lin class="nav-item">
                 @Html.ActionLink("Hola " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage", @class = "nav-link" })
             </lin>
-            <li><a href="javascript:document.getElementById('logoutForm').submit()">Cerrar sesión</a></li>
+            <li><a href="javascript:document.getElementById('logoutForm').submit() "class="nav-link">Cerrar sesión</a></li>
         </ul>
     }
 }
