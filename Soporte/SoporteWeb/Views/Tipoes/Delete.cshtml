@@ -31,9 +31,9 @@
                 {
                     @Html.AntiForgeryToken()
 
-                    <div class="form-actions no-color">
+                    <div class="form-actions no-color text-center">
                         <input type="submit" value="Eliminar" class="btn btn-dark" /> |
-                        @Html.ActionLink("Regresar a la lista", "Index")
+                        @Html.ActionLink("Regresar a la lista", "Index","Tipoes", new { @class = "btn btn-dark" })
                     </div>
                 }
             </div>

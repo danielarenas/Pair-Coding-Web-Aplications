@@ -52,15 +52,16 @@
                         }
                     </tbody>
                 </table>
+                <p class="text-center">
+                    @Html.ActionLink("Editar", "Edit", "Tipoes", new { id = Model.Id }, new { @class = "btn btn-dark" }) |
+                    @Html.ActionLink("Regresar a la lista", "Index", "Tipoes", new { @class = "btn btn-dark" })
+                </p>
             </div>
         </div>
 
     </div>
 
 </div>
-<p class="text-center">
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
 
 

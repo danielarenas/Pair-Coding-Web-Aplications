@@ -39,12 +39,12 @@
                 </dd>
 
             </dl>
+            <div class="text-center">
+                @Html.ActionLink("Editar", "Edit", "Costoes", new { id = Model.Id }, new { @class = "btn btn-dark" }) |
+                @Html.ActionLink("Regresar", "Index", "Costoes", new { @class = "btn btn-dark" })
+            </div>
         </div>
 
     </div>
 
 </div>
-<p class="text-center">
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
