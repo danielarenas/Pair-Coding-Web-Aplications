@@ -5,51 +5,104 @@
 
 @*<h2>@ViewBag.Title.</h2>*@
 
-<div class="row justify-content-center">
-    <div class="col-md-6">
-        <div class="card mt-4">
-            <div class="card-header bg-dark">
-                <h5 class="m-0 text-white text-center">Solicitud de Registro</h5>
+<div class="chupas">
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
-            </div>
-            <div class="card-body">
-                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-                {
-                    @Html.AntiForgeryToken()
-                    <h4 class="text-lg-center">Cree una cuenta nueva.</h4>
-                    <hr />
-                    @Html.ValidationSummary("", new { @class = "text-danger" })
-                    <div class="form-group">
-                        @Html.LabelFor(m => m.Email, new { @class = "col-md-6 control-label" })
-                        <div class="col-md-10">
-                            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        @Html.LabelFor(m => m.Password, new { @class = "col-md-6 control-label" })
-                        <div class="col-md-10">
-                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-6 control-label" })
-                        <div class="col-md-10">
-                            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <input type="submit" class="btn btn-dark" value="Registrarse" />
-                        </div>
-                    </div>}
 
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card mt-4">
+                <div class="card-header bg-dark">
+                    <h5 class="m-0 text-white text-center">Solicitud de Registro</h5>
+
+                </div>
+                <div class="card-body">
+                    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                    {
+                        @Html.AntiForgeryToken()
+                        <h4 class="text-lg-center">Cree una cuenta nueva.</h4>
+                        <hr />
+                        @Html.ValidationSummary("", new { @class = "text-danger" })
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Email, new { @class = "col-md-6 control-label" })
+                            <div class="col-md-10">
+                                @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Password, new { @class = "col-md-6 control-label" })
+                            <div class="col-md-10">
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-6 control-label" })
+                            <div class="col-md-10">
+                                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-2 col-md-10">
+                                <input type="submit" class="btn btn-dark" value="Registrarse" />
+                            </div>
+                        </div>}
+
+                </div>
             </div>
         </div>
     </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 </div>
+<footer class="ftco-footer ftco-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Technical Support</h2>
+                    <p>Una Empresa totalmente capacitada para resolver tus problemas informáticos</p>
 
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Servicios</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fas fa-server"></i> Virtualización de servidores</a></li>
+                        <li><a href="#"><i class="fas fa-user-friends"></i> Soporte presencial</a></li>
+                        <li><a href="#"><i class="fas fa-laptop"></i> Soporte Remoto</a></li>
+                        <li><a href="#"><i class="fas fa-desktop"></i> Orientación Informática</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Lista de Contacto</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i><span class="text"> Calle Coahuila 2009, Zona Nte., 22000 Tijuana, B.C.</span></li>
+                            <li><i class="fas fa-phone-alt"></i><span class="text"> +52 664 111 55 44 </span></li>
+                            <li><i class="fas fa-envelope"></i><span class="text"> info@tech.net</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
