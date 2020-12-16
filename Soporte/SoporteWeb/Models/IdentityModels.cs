@@ -16,6 +16,12 @@ namespace SoporteWeb.Models
             // Agregar aquí notificaciones personalizadas de usuario
             return userIdentity;
         }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string Hobbies { get; set; }
+        public string Musics { get; set; }
+        public string Videos { get; set; }
+        public string Photo { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
