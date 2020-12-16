@@ -8,78 +8,75 @@
     <br />
 </div>
 
+<div class="chupas">
 
 
-<div class="row col-md-offset-2">
-    <div class="col-md-10">
-        <div class="card">
-            <div class="card-header bg-dark">
-                <h4 class="m-0 text-center text-white">Perfil @User.Identity.Name</h4>
-            </div>
-            <div class="card-body">
-                <div class="row justify-content-between">
-                    <div class="col-md-6">
-                        <div class="card">
-                            <img src="~/Content/img/piano.jpg" alt="Picture" class="rounded img-fluid" />
-                            <form class="form-horizontal" action="@Url.Action("Picture","Profile")" method="post" enctype="multipart/form-data">
-                                <input type="file" value="" class="form-control" />
-                                <input type="submit" value="Guardar Foto" class="form-control" />
-                            </form>
-                        </div>
+
+    <div class="ml-5">
+
+
+        <div class="row col-md-offset-2 ml-5">
+            <div class="col-md-10 mt-5 ml-5">
+                <div class="card ml-5">
+                    <div class="card-header bg-dark">
+                        <h4 class="m-0 text-center text-white">Perfil @User.Identity.Name</h4>
                     </div>
-                    <div class="col-md-6">
-                        <div class="card">
-                            <div class="card-header py-2 bg-principal bg-dark">
-                                <b class="text-center m-0 text-white">Información Principal</b>
-                                <button class="btn btn-sm btn-primary float-right" data-toggle="modal" data-target="#myModal">Editar</button>
+                    <div class="card-body">
+                        <div class="row justify-content-between">
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <img src="~/Upload/@Model.Photo" alt="Picture" class="rounded img-fluid" />
+                                    <form class="form-horizontal" action="@Url.Action("Picture","Profile")" method="post" enctype="multipart/form-data">
+                                        <input type="file" value="" name="pic" class="form-control" />
+                                        <input type="submit" value="Guardar Foto" class="form-control" />
+                                    </form>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <table class="table table-sm">
-                                    <tr>
-                                        <td>Nombre </td>
-                                        <td>@Model.Name</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email</td>
-                                        <td>@Model.Email</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Usuario</td>
-                                        <td>@Model.UserName</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Telefono</td>
-                                        <td>@Model.PhoneNumber</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Descripción</td>
-                                        <td>@Model.Description</td>
-                                    </tr>
-                                    
-                                    
-                                </table>
-                                <hr />
-                                <table class="table table-sm table-borderless">
-                                    
-                                    <tr>
-                                        <td>Musica</td>
-                                    </tr>
-                                    <tr>
-                                        <td>@Model.Musics</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Hobbies</td>
-                                    </tr>
-                                    <tr>
-                                        <td>@Model.Hobbies</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Videos</td>
-                                    </tr>
-                                    <tr>
-                                        <td>@Model.Videos</td>
-                                    </tr>
-                                </table>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header py-2 bg-principal bg-dark">
+                                        <b class="text-center m-0 text-white">Información Principal</b>
+                                        <button class="btn btn-sm btn-primary float-right" data-toggle="modal" data-target="#myModal">Editar</button>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table table-sm">
+                                            <tr>
+                                                <td>Nombre </td>
+                                                <td>@Model.Name</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Email</td>
+                                                <td>@Model.Email</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Usuario</td>
+                                                <td>@Model.UserName</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Telefono</td>
+                                                <td>@Model.PhoneNumber</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Descripción</td>
+                                                <td>@Model.Description</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Musica</td>
+                                                <td>@Model.Musics</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Hobbies</td>
+                                                <td>@Model.Hobbies</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Videos</td>
+                                                <td>@Model.Videos</td>
+                                            </tr>
+
+                                        </table>
+                                        <hr />
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -94,7 +91,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                <h4 class="modal-title" id="myModalLabel">Editar Perfil</h4>
             </div>
             <form class="" action="@Url.Action("Details","Profile")" method="post">
                 <div class="modal-body">
@@ -117,9 +114,27 @@
                         </div>
                         @*Colocar los renglones faltanes ( Descripcion Musica, Hobies y videos y colocar la linea)*@
                     </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="text" value="" name="Musics" placeholder="Musica" class="form-control" />
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="text" value="" name="Hobbies" placeholder="Hobbies" class="form-control" />
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <div class="col-md-12">
+                            <input type="text" value="" name="Videos" placeholder="Videos" class="form-control" />
+                        </div>
+
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Cerrar</button>
                     <button type="submit" class="btn btn-primary">Guardar Cambios</button>
                 </div>
             </form>

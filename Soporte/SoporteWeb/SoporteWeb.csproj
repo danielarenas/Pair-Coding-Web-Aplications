@@ -243,6 +243,7 @@
     <Content Include="Imgs\image_5.jpg" />
     <Content Include="Imgs\image_6.jpg" />
     <Content Include="Imgs\loc.png" />
+    <Content Include="Imgs\maquina.jpg" />
     <Content Include="Imgs\person_1.jpg" />
     <Content Include="Imgs\person_2.jpg" />
     <Content Include="Imgs\person_3.jpg" />
@@ -444,6 +445,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

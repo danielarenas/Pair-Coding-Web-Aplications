@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
+using System.IO;
 
 namespace SoporteWeb.Controllers
 {
@@ -33,6 +34,31 @@ namespace SoporteWeb.Controllers
             userbd.Description = pvm.Description;
             db.SaveChanges();
 
+            return RedirectToAction("Details");
+        }
+
+        [HttpPost]
+        public ActionResult Picture(HttpPostedFileBase pic)
+        {
+            string path = Server.MapPath("~/Upload/");
+
+            if (Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+
+            var userId = User.Identity.GetUserId();
+            var userdb = db.Users.Find(userId);
+            var foto = pic.FileName;
+            var dir = "";
+            if (pic!=null)
+            {
+                dir = User.Identity.Name + Path.GetExtension(foto);
+                pic.SaveAs(path + dir);
+            }
+
+            userdb.Photo = dir;
+            db.SaveChanges();
             return RedirectToAction("Details");
         }
 
