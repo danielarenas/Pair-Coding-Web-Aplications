@@ -8,7 +8,7 @@
     @* Agregamos Font Awasome para agregar iconos *@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="~/Content/open-iconic-bootstrap.min.css">
+    
     <link rel="stylesheet" href="~/Content/animate.css">
 
     <link rel="stylesheet" href="~/Content/owl.carousel.min.css">
@@ -37,14 +37,21 @@
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav nav ml-auto">
-                    <li class="nav-item">@Html.ActionLink("Inicio", "Index", "Home", null, new { @class = "nav-link" })</li>
-                    <li class="nav-item">@Html.ActionLink("Acerca de Nosotros", "About", "Home", null, new { @class = "nav-link" })</li>
-                    @if (User.Identity.IsAuthenticated)
-                    {
-        <li class="nav-item">@Html.ActionLink("Servicios", "Index", "Tipoes", null, new { @class = "nav-link" })</li>
-                        <li class="nav-item">@Html.ActionLink("Trabajos", "Index", "Costoes", null, new { @class = "nav-link" })</li>
-}
 
+                    <li class="nav-item"><a href="@Url.Action("Index","Home")" class="nav-link">Inicio</a> </li>
+                    <li class="nav-item"><a href="@Url.Action("About","Home")" class="nav-link">Acerca</a> </li>
+                          @if (User.Identity.IsAuthenticated)
+                           {
+                             <li class="nav-item"><a href="@Url.Action("Index","Tipoes")" class="nav-link">Servicios</a> </li>
+                             <li class="nav-item"><a href="@Url.Action("Index","Costoes")" class="nav-link">Trabajos</a> </li>
+                                               
+                           }
+                              @if (User.IsInRole("Administrator"))
+                               {
+                   
+                                  <li class="nav-item"><a href="@Url.Action("Index","Roles")" class="nav-link">Roles</a> </li>
+                               }
+                    
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>

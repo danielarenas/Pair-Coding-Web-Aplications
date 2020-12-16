@@ -1,0 +1,46 @@
+﻿@model SoporteWeb.Models.ApplicationUser
+@{
+    ViewBag.Title = "AddRoles";
+}
+<div class="Muerdes">
+    <br />
+    <br />
+    <br />
+</div>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card py-0">
+                <div class="card-header bg-dark">
+                    <h5 class="m-1 text-white">Agregar un Rol</h5>
+                </div>
+                <div class="card-body">
+                    <form class="" action="@Url.Action("AddRoles","Roles")" method="post">
+                        <div class="form-group">
+                            <label class="col-md-10">Usuario</label>
+                            <div class="col-md-10">
+                                <input type="hidden" name="UserId" value="@Model.Id" />
+                                <input type="text" name="UserName" value="@Model.UserName" class="form-control" readonly />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-10">Escoja el rol</label>
+                            <div class="col-md-10">
+                                <select class="form-control" name="RolName" required>
+                                    <option value="">Elige un Rol</option>
+                                    <option value="Administrator">Administrador</option>
+                                    <option value="Normal">Normal</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row justify-content-center">
+                            <input type="submit" value="Enviar" class="btn btn-outline-danger btn-sm" />
+                            <a href="@Url.Action("Index","Roles")" class="btn btn-outline-primary btn-sm ml-1">Regresar</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

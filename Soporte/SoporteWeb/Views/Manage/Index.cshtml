@@ -16,6 +16,7 @@
                     <h5 class="m-0 text-white text-center">@ViewBag.Title.</h5>
 
                 </div>
+<<<<<<< Updated upstream
 
                 <div class="card-body">
                     <div class="row">
@@ -147,3 +148,134 @@
                 </div>
             </div>
         </footer>
+=======
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-8">
+
+                            <p class="text-success">@ViewBag.StatusMessage</p>
+                            <div>
+                                <h4>Cambiar la configuración de la cuenta</h4>
+                                <hr />
+                                <dl class="dl-horizontal">
+                                    <dt>Contraseña:</dt>
+                                    <dd>
+                                        [
+                                        @if (Model.HasPassword)
+                                        {
+                                            @Html.ActionLink("Cambiar la contraseña", "ChangePassword")
+                                        }
+                                        else
+                                        {
+                                            @Html.ActionLink("Crear", "SetPassword")
+                                        }
+                                        ]
+                                    </dd>
+
+                                    @*
+                                        Los números de teléfono se pueden usar como una segunda fase de comprobación en un sistema de autenticación en dos fases.
+                                         Consulte <a href="https://go.microsoft.com/fwlink/?LinkId=403804">este artículo</a>
+                                            para obtener detalles sobre cómo configurar esta aplicación ASP.NET para que sea compatible con la autenticación en dos fases mediante SMS.
+                                         Quite la marca de comentario del bloque siguiente después de configurar la autenticación en dos fases
+                                    *@
+                                    @*
+                                        <dt>Número de teléfono:</dt>
+                                        <dd>
+                                            @(Model.PhoneNumber ?? "None")
+                                            @if (Model.PhoneNumber != null)
+                                            {
+                                                <br />
+                                                <text>[&nbsp;&nbsp;@Html.ActionLink("Change", "AddPhoneNumber")&nbsp;&nbsp;]</text>
+                                                using (Html.BeginForm("RemovePhoneNumber", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                                                {
+                                                    @Html.AntiForgeryToken()
+                                                    <text>[<input type="submit" value="Quitar" class="btn-link" />]</text>
+                                                }
+                                            }
+                                            else
+                                            {
+                                                <text>[&nbsp;&nbsp;@Html.ActionLink("Add", "AddPhoneNumber")
+                                            }
+                                        </dd>
+                                    *@
+
+                                    @*@if (Model.TwoFactor)
+                                        {
+                                            using (Html.BeginForm("DisableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                                            {
+                                                @Html.AntiForgeryToken()
+                                                <text>Habilitado
+                                                <input type="submit" value="Deshabilitar" class="btn btn-link" />
+                                                </text>
+                                            }
+                                        }
+                                        else
+                                        {
+                                            using (Html.BeginForm("EnableTwoFactorAuthentication", "Manage", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                                            {
+                                                @Html.AntiForgeryToken()
+                                                <text>Deshabilitada
+                                                <input type="submit" value="Habilitar" class="btn btn-link" />
+                                                </text>
+                                            }
+                                        }*@
+
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+</div>
+
+<footer class="ftco-footer ftco-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Technical Support</h2>
+                    <p>Una Empresa totalmente capacitada para resolver tus problemas informáticos</p>
+
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Servicios</h2>
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="fas fa-server"></i> Virtualización de servidores</a></li>
+                        <li><a href="#"><i class="fas fa-user-friends"></i> Soporte presencial</a></li>
+                        <li><a href="#"><i class="fas fa-laptop"></i> Soporte Remoto</a></li>
+                        <li><a href="#"><i class="fas fa-desktop"></i> Orientación Informática</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md">
+                <div class="ftco-footer-widget mb-4">
+                    <h2 class="ftco-heading-2">Lista de Contacto</h2>
+                    <div class="block-23 mb-3">
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i><span class="text"> Calle Coahuila 2009, Zona Nte., 22000 Tijuana, B.C.</span></li>
+                            <li><i class="fas fa-phone-alt"></i><span class="text"> +52 664 111 55 44 </span></li>
+                            <li><i class="fas fa-envelope"></i><span class="text"> info@tech.net</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+>>>>>>> Stashed changes

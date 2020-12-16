@@ -24,8 +24,12 @@
 
 
     <p class="mt-3 text-center">
-        <a href="@Url.Action("Create","Tipoes")" class="btn btn-sm bg-dark text-white"><i class="fas fa-plus"></i>Agregar</a>
+        @if (User.IsInRole("Administrator"))
+        {
 
+       
+            <a href="@Url.Action("Create","Tipoes")" class="btn btn-sm bg-dark text-white"><i class="fas fa-plus"></i>Agregar</a>
+        }
     </p>
 
     <div class="row justify-content-center">
