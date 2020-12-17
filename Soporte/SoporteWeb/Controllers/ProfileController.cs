@@ -51,7 +51,7 @@ namespace SoporteWeb.Controllers
             var userdb = db.Users.Find(userId);
             var foto = pic.FileName;
             var dir = "";
-            if (pic!=null)
+            if (pic != null)
             {
                 dir = User.Identity.Name + Path.GetExtension(foto);
                 pic.SaveAs(path + dir);

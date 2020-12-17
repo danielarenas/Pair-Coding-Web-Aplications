@@ -243,7 +243,6 @@
     <Content Include="Imgs\image_5.jpg" />
     <Content Include="Imgs\image_6.jpg" />
     <Content Include="Imgs\loc.png" />
-    <Content Include="Imgs\maquina.jpg" />
     <Content Include="Imgs\person_1.jpg" />
     <Content Include="Imgs\person_2.jpg" />
     <Content Include="Imgs\person_3.jpg" />
@@ -384,6 +383,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Upload\superuser%40gmail.com.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -445,7 +445,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Upload\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
