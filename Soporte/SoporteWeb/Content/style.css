@@ -9539,17 +9539,6 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
-.chupas{
+
+.login {
     background-image: url(/Imgs/login.jpg)
-   
-}
-.Comes {
-    background-image: url(/Imgs/server.jpg);
-  
-}
-.Muerdes {
-    background-color: black;
-}
-.Masticas{
-    background-image:url(/Imgs/work.jpg);
-}

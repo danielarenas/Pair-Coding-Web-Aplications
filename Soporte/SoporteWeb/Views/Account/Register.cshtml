@@ -1,17 +1,72 @@
 ﻿@model SoporteWeb.Models.RegisterViewModel
 @{
     ViewBag.Title = "Registrarse";
+    Layout = null;
 }
+<div class="login">
+    <br />
+    <br />
+    <br />
+    <br />
 
-@*<h2>@ViewBag.Title.</h2>*@
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - Technical Support</title>
 
-<div class="chupas">
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+        @* Agregamos Font Awasome para agregar iconos *@
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+
+        <link rel="stylesheet" href="~/Content/animate.css">
+
+        <link rel="stylesheet" href="~/Content/owl.carousel.min.css">
+        <link rel="stylesheet" href="~/Content/owl.theme.default.min.css">
+        <link rel="stylesheet" href="~/Content/magnific-popup.css">
+
+
+
+        <link rel="stylesheet" href="~/Content/ionicons.min.css">
+
+        <link rel="stylesheet" href="~/Content/flaticon.css">
+        <link rel="stylesheet" href="~/Content/icomoon.css">
+        <link rel="stylesheet" href="~/Content/style.css">
+
+
+
+    </head>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="https://localhost:44363/"><span>Technical Support</span></a>
+            <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav nav ml-auto">
+
+                    <li class="nav-item"><a href="@Url.Action("Index","Home")" class="nav-link">Inicio</a> </li>
+                    <li class="nav-item"><a href="@Url.Action("About","Home")" class="nav-link">Acerca</a> </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="nav-item"><a href="@Url.Action("Index","Tipoes")" class="nav-link">Servicios</a> </li>
+                        <li class="nav-item"><a href="@Url.Action("Index","Costoes")" class="nav-link">Trabajos</a> </li>
+
+                    }
+                    @if (User.IsInRole("Administrator"))
+                    {
+
+                        <li class="nav-item"><a href="@Url.Action("Index","Roles")" class="nav-link">Roles</a> </li>
+                    }
+
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+
+        </div>
+    </nav>
+
+
 
 
     <div class="row justify-content-center">
@@ -56,7 +111,9 @@
             </div>
         </div>
     </div>
-
+    <br />
+    <br />
+    <br />
     <br />
     <br />
     <br />
@@ -66,43 +123,8 @@
     <br />
     <br />
 </div>
-<footer class="ftco-footer ftco-section">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Technical Support</h2>
-                    <p>Una Empresa totalmente capacitada para resolver tus problemas informáticos</p>
 
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Servicios</h2>
-                    <ul class="list-unstyled">
-                        <li><a href="#"><i class="fas fa-server"></i> Virtualización de servidores</a></li>
-                        <li><a href="#"><i class="fas fa-user-friends"></i> Soporte presencial</a></li>
-                        <li><a href="#"><i class="fas fa-laptop"></i> Soporte Remoto</a></li>
-                        <li><a href="#"><i class="fas fa-desktop"></i> Orientación Informática</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md">
-                <div class="ftco-footer-widget mb-4">
-                    <h2 class="ftco-heading-2">Lista de Contacto</h2>
-                    <div class="block-23 mb-3">
-                        <ul>
-                            <li><i class="fas fa-map-marker-alt"></i><span class="text"> Calle Coahuila 2009, Zona Nte., 22000 Tijuana, B.C.</span></li>
-                            <li><i class="fas fa-phone-alt"></i><span class="text"> +52 664 111 55 44 </span></li>
-                            <li><i class="fas fa-envelope"></i><span class="text"> info@tech.net</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
 
-    @section Scripts {
-        @Scripts.Render("~/bundles/jqueryval")
-    }
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
