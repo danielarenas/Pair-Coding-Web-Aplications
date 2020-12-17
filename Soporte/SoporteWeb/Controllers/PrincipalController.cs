@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace SoporteWeb.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Administrator")]
     public class PrincipalController : Controller
     {
         // GET: Principal
