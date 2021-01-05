@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SoporteWeb.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,10 +10,14 @@ namespace SoporteWeb.Controllers
     [Authorize(Roles = "Administrator")]
     public class PrincipalController : Controller
     {
+        ApplicationDbContext db = new ApplicationDbContext();
         // GET: Principal
         public ActionResult Index()
         {
-            return View();
+
+            
+            var costoes = db.Costos.ToList();
+            return View(costoes);
         }
     }
 }

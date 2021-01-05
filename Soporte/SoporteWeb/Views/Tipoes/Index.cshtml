@@ -4,22 +4,37 @@
     ViewBag.Title = "Index";
 }
 
-
+<br />
+<br />
+<br />
+<br />
 
     <div class="text-center mt-3">
         <h2><p class="text-white font-weight-bolder">Tipos de Servicios</p></h2>
     </div>
 
 
-    <p class="mt-3 text-center">
+    <p class="text-center mt-3 ">
         @if (User.IsInRole("Administrator"))
         {
 
-       
+
             <a href="@Url.Action("Create","Tipoes")" class="btn btn-sm bg-dark text-white"><i class="fas fa-plus"></i>Agregar</a>
         }
     </p>
+    <div class="jojos">
+        <div class="">
+            <div class="col-md-6">
+                <div class="card">
 
+<<<<<<< HEAD
+                    <div class=" card-header">
+                        Lista de Servicios
+                    </div>
+
+                    <div class="card-body">
+                        <table class="table">
+=======
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-10">
@@ -31,13 +46,18 @@
 
                     <div class="card-body">
                         <table class="table table-hover">
+>>>>>>> 6a4748faa594b3068e1cc9b5afeb39afc20a534c
                             <thead class="thead-dark">
 
                                 <tr>
                                     <th>
                                         @Html.DisplayNameFor(model => model.Name)
                                     </th>
+<<<<<<< HEAD
+                                    <th></th>
+=======
                                     
+>>>>>>> 6a4748faa594b3068e1cc9b5afeb39afc20a534c
                                 </tr>
 
                             </thead>
@@ -68,4 +88,9 @@
 
             </div>
         </div>
+<<<<<<< HEAD
+
     </div>
+=======
+    </div>
+>>>>>>> 6a4748faa594b3068e1cc9b5afeb39afc20a534c

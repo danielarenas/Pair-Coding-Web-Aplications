@@ -8,36 +8,37 @@
         <h2><p class="text-white font-weight-bolder">Eliminar</p></h2>
     </div>
 
+    <div class="jojos">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <h3>¿Seguro que deseas eliminarlo?</h3>
+                    <div>
+                        <h4>Tipo</h4>
+                        <hr />
+                        <dl class="dl-horizontal">
+                            <dt>
+                                @Html.DisplayNameFor(model => model.Name)
+                            </dt>
 
-    <div class="row justify-content-center">
-        <div class="col-md-6">
-            <div class="card">
-                <h3>¿Seguro que deseas eliminarlo?</h3>
-                <div>
-                    <h4>Tipo</h4>
-                    <hr />
-                    <dl class="dl-horizontal">
-                        <dt>
-                            @Html.DisplayNameFor(model => model.Name)
-                        </dt>
+                            <dd>
+                                @Html.DisplayFor(model => model.Name)
+                            </dd>
 
-                        <dd>
-                            @Html.DisplayFor(model => model.Name)
-                        </dd>
+                        </dl>
 
-                    </dl>
+                        @using (Html.BeginForm())
+                        {
+                            @Html.AntiForgeryToken()
 
-                    @using (Html.BeginForm())
-                    {
-                        @Html.AntiForgeryToken()
-
-                        <div class="form-actions no-color text-center">
-                            <input type="submit" value="Eliminar" class="btn btn-dark" /> |
-                            @Html.ActionLink("Regresar a la lista", "Index", "Tipoes", new { @class = "btn btn-dark" })
-                        </div>
-                    }
+                            <div class="form-actions no-color text-center">
+                                <input type="submit" value="Eliminar" class="btn btn-dark" /> |
+                                @Html.ActionLink("Regresar a la lista", "Index", "Tipoes", new { @class = "btn btn-dark" })
+                            </div>
+                        }
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>

@@ -9541,5 +9541,7 @@ textarea.form-control {
     stroke-dashoffset: -136px; } }
 
 .login {
-    background-image: url(/Imgs/login.jpg)
+
+    background-image: url(../Imgs/login.jpg);
+
 }
