@@ -9,8 +9,8 @@
         <h2><p class="text-black font-weight-bolder">Detalles</p></h2>
     </div>
 
-    <div class="row justify-content-center">
-        <div class="col-md-6">
+    <div class="container">
+        <div class="col-md-10">
             <div class="card">
                 <h4>Lista de Detalles</h4>
                 <hr />
@@ -44,6 +44,8 @@
                     @Html.ActionLink("Editar", "Edit", "Costoes", new { id = Model.Id }, new { @class = "btn btn-dark" }) |
                     @Html.ActionLink("Regresar", "Index", "Costoes", new { @class = "btn btn-dark" })
                 </div>
+                <br />
+                <br />
             </div>
 
         </div>

@@ -8,11 +8,11 @@
         <h2><p class="text-white font-weight-bolder">Eliminar</p></h2>
     </div>
 
-    <div class="jojos">
-        <div class="row justify-content-center">
-            <div class="col-md-6">
+    <div class="container">
+        
+            <div class="col-md-10">
                 <div class="card">
-                    <h3>¿Seguro que deseas eliminarlo?</h3>
+                    <h3 class="text-center">¿Seguro que deseas eliminarlo?</h3>
                     <div>
                         <h4>Tipo</h4>
                         <hr />
@@ -34,11 +34,13 @@
                             <div class="form-actions no-color text-center">
                                 <input type="submit" value="Eliminar" class="btn btn-dark" /> |
                                 @Html.ActionLink("Regresar a la lista", "Index", "Tipoes", new { @class = "btn btn-dark" })
+
                             </div>
                         }
+                    <br />
+                    <br />
                     </div>
                 </div>
 
             </div>
         </div>
-    </div>

@@ -9,21 +9,22 @@
 
     </div>
 
-    <div class="text-center mt-2">
+    <div class="card">
 
         <dl class="dl-horizontal">
             <dt class="text-white font-weight-bolder">
-                @Html.DisplayNameFor(model => model.Name)
+                <h3>@Html.DisplayNameFor(model => model.Name)</h3> 
             </dt>
 
             <dd class="text-white font-weight-bolder">
-                @Html.DisplayFor(model => model.Name)
+                <h3>@Html.DisplayFor(model => model.Name)</h3>
             </dd>
 
         </dl>
     </div>
-    <div class="row justify-content-center">
-        <div class="col-md-6">
+
+    <div class="container">
+        <div class="col-md-10">
             <div class="card">
 
 
@@ -35,7 +36,7 @@
                     <table class="table">
                         <thead class="thead-dark">
                             <tr>
-                                <th>Usuario</th>
+                                @*<th>Usuario</th>*@
                                 <th>Descripción</th>
                                 <th>Fecha</th>
                                 <th>Tipo</th>
@@ -46,7 +47,7 @@
                             @foreach (var item in Model.Costos)
                             {
                                 <tr>
-                                    <th>@item.User</th>
+                                    @*<th>@item.User</th>*@
                                     <th>@item.Description</th>
                                     <th>@item.DateTime</th>
                                     <th>@Model.Name</th>
